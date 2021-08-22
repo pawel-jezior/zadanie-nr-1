@@ -10,12 +10,6 @@ html {
 
 body {
   min-height: 100vh;
-
-  /*
-    to bedzie na gotowe
-    background: #fff;
-      */
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,10 +18,10 @@ body {
 }
 
 .main {
-  height: 635px;
-  width: 1343px;
+  height: 600px;
+  width: 1200px;
   background: violet;
-
+  border-radius: 5px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -35,12 +29,16 @@ body {
   display: grid;
   grid-template-areas: "main__grid--major main__grid--aside";
   grid-template-columns: 1fr 700px;
-  column-gap: 50px;
 }
 
 .main__grid--major {
   grid-area: main__grid--major;
-  padding: 10px;
+  padding: 60px;
+  padding-right: 0px;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-align: start;
+  justify-content: center;
 }
 
 .main__grid--aside {
@@ -71,12 +69,19 @@ body {
 }
 
 .main__grid--aside-icon {
-    border-radius: 3px;
+  border-radius: 3px;
 }
 
 .main__grid--aside-article-paragraph {
   font-size: 12px;
+}
 
+.main__grid--aside-article-extraMargin {
+  margin-top: 40px;
+}
+
+.main__grid--aside-article-negativeMargin {
+  margin-top: -20px;
 }
 
 .special-color {
@@ -88,11 +93,15 @@ body {
 }
 
 .main__grid--major-header {
-  font-size: 32px;
+  font-size: 42px;
+  margin-top: -30px;
+  margin-bottom: -30px;
+  font-weight: 400;
 }
 
 .main__grid--major-desription {
-  font-size: 15px;
+  font-size: 13px;
+  line-height: 24px;
 }
 
 .main__grid--major-button {
