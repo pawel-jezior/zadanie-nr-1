@@ -19,6 +19,7 @@ body {
 .main {
   height: 600px;
   width: 1200px;
+  margin: 10px;
   border-radius: 5px;
   background: rgb(254, 254, 254);
   background: linear-gradient(
@@ -27,7 +28,7 @@ body {
     rgba(233, 234, 247, 1) 100%
   );
   font-family: Arial, Helvetica, sans-serif;
-    color:#1a237e
+  color: #1a237e;
 }
 
 .main__grid {
@@ -124,4 +125,56 @@ body {
   border-radius: 4px;
   border-style: none;
   line-height: 14px;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    align-items: flex-start;
+  }
+  .main__grid {
+    grid-template-areas:
+      "main__grid--major main__grid--major"
+      "main__grid--aside main__grid--aside";
+  }
+
+  .main__grid--aside {
+    justify-content: center;
+    padding-top: 0px;
+  }
+
+  .main__grid--aside-article {
+    margin: 20px;
+  }
+
+  .main__grid--major {
+    padding: 80px 80px 20px 80px;
+  }
+
+  .main__grid--major-header {
+    margin-bottom: -40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main__grid {
+    grid-template-columns: 1fr 300px;
+  }
+
+  .main__grid--major {
+    padding: 40px;
+  }
+
+  .main__grid--aside {
+    padding: 0px 10px 20px 10px;
+  }
+
+  .main__grid--aside-article {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 614px) {
+  .main__grid--aside-article {
+    width: 360px;
+  }
 }
